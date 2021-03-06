@@ -73,14 +73,14 @@
 <script>
 import ButtonIcon from "@/components/ButtonIcon.vue";
 import { mapState } from "vuex";
-const platformIsWin32 = window.require
-  ? window.require("os").platform() == "win32"
+const platformIsWin32 = require
+  ? require("os").platform() == "win32"
     ? true
     : false
   : false;
 
 const win = platformIsWin32
-  ? window.require("electron").remote.getCurrentWindow()
+  ? require("electron").remote.getCurrentWindow()
   : null;
 
 export default {
